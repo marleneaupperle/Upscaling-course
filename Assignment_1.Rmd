@@ -1,0 +1,55 @@
+---
+title: "Assignment 1"
+author: "Marlene Aupperle"
+date: "2023-04-12"
+output: 
+  html_document:
+    css: "style.css"
+---
+
+
+#### Task 1: Assign the value of five to a variable called a and the value of two to a variable called b.
+a <- 5
+b <- 2
+
+#### Task 2: Compute the sum, difference, product and ratio of a and b (a always in the first place) and store the results to four different variables called r1, r2, r3, and r4.
+
+##### Sum of a and b stored to r1
+r1 <- a+b
+
+##### Difference of a and b stored to r2
+r2 <- a-b
+
+##### Product of a and b stored to r3
+r3 <- a*b
+
+##### Ratio of a and b stored to r4
+r4 <- a/b
+
+#### Task 3: Create a vector v1 which contains the values stored within the four variables from step 2.
+v1 <- c(r1,r2,r3,r4)
+
+#### Task 4: Add a fifth entry to vector v1 which represents a by the power of b (i.e. a**b).
+r5 <- a**b
+v1 <- c(r1,r2,r3,r4,r5)
+
+## Task 5: Show the content of vector v1 (e.g. use the print function or just type the variable name in a separate row).
+print(v1)
+
+#### Task 6: Create a second vector v2 which contains information on the type of mathematical operation used to derive the five results. Hence this vector should have five entries of values sum, difference,…
+v2 <- c("sum","difference","product","ratio","power")
+
+#### Task 7: Show the content of vector v2.
+print(v2)
+
+#### Task 8: Combine the two vectors v1 and v2 into a data frame called df. Each vector should become one column of the data frame so you will end up with a data frame having 5 rows and 2 columns.
+df <- data.frame(v1 = v1, v2 = v2)
+
+#### Task 9: Make sure that the column with the data of v1 is named Results and v2 is named Operation.
+df <- data.frame(Results = v1, Operation = v2)
+
+#### Task 10: Show the entire content of df.
+print(df)
+
+#### Task 11: Show just the entry of the cell in the second row and first column.
+df[2,1]
